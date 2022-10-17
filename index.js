@@ -25,7 +25,7 @@ const createQuestions = (arrData) => {
 }
 
 const startQuiz = () => {
-    createQuestions(quizData)
+    createQuestions(quizData);
 }
 
 startQuiz()
