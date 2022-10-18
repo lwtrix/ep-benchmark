@@ -5,12 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="quiz-showcase" id="quizShowcase">
+    <div class="main">
 
+        <div class="header">
+            <img class="logo" src="./assets/epicode_logo.png" alt="#">
+            <span class="timer">Timer</span>
+        </div>
+
+        <div class="quiz-showcase" id="quizShowcase">
+            
+        </div>
+        <div class="q-count">
+            Question 1<span>/10</span>
+        </div>
+
+        <div class="controls" style="display: none;">
+            <button class="next-btn" id="nextBtn">Next</button>
+            <button class="start-btn" id="startBtn">Start</button>
+            <button class="submit-btn" id="submitBtn">Submit</button>
+        </div>
+        
+
+        
     </div>
+    
+
+    
+<script type="module" src="index.js"></script>
+
+
+
+<!-- <div class="header">
+        <span>Logo</span>
+        <span>Timer</span>
+    </div>
+
+    <div class="body-benchmark">
+        <p>Question</p>
+        <div class="option-container">
+            <span>Option</span>
+            <span>Option</span>
+            <span>Option</span>
+            <span>Option</span>
+        </div>
+    </div> -->
 </body>
 
-<script type="module" src="index.js"></script>
 </html>
