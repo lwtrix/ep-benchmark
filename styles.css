@@ -36,6 +36,8 @@ body {
     justify-content: space-around;
     text-align: center;
     width: 80%;
+    font-family: inter;
+    font-weight: bold;
 }
 
 .q-option:link,
@@ -82,4 +84,4 @@ body {
 
 .q-count span {
     color: #d20094;
-}
+} 
