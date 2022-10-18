@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background: url('./assets/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Outfit;
+}
+
 .header {
     padding: 50px;
     display: flex;
@@ -16,6 +23,11 @@
     align-items: center;
     justify-content: space-around;
     height: 50vh;
+    text-align: center;
+}
+
+.q-block .q-text {
+    font-size: 60px;
 }
 
 .q-options {
@@ -23,9 +35,51 @@
     flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
-    width: 50%;
+    width: 80%;
 }
 
+.q-option:link,
+.q-option:visited,
 .q-option {
-    width: 50%;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.24);
+    display: inline-block;
+    border-radius: 100px;
+    padding: 20px 50px;
+    margin: 10px 0;
+    position: relative;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.q-option:hover {
+    background-color: #d20094;
+}
+
+.q-option::before {
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.109));
+    box-sizing: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1000;
+    margin: -5px;
+}
+
+.q-count {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.q-count span {
+    color: #d20094;
 }
