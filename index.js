@@ -40,7 +40,7 @@ const createQuestions = (arrData) => {
         option.addEventListener('click', selectOption)
     }
 
-    document.body.appendChild(quizShowcase);
+    
 }
 
 const nextQuestion = () => {
