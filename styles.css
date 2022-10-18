@@ -12,9 +12,14 @@ body {
 }
 
 .header {
+    margin: 0 10%;
     padding: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
 }
 
 .q-block {
@@ -22,12 +27,21 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    width: 90vw;
     height: 50vh;
     text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.q-block .q-category {
+    display: none;
 }
 
 .q-block .q-text {
     font-size: 60px;
+    margin-bottom: 60px;
+    font-weight: 300;
 }
 
 .q-options {
@@ -44,7 +58,7 @@ body {
 .q-option:visited,
 .q-option {
     width: 40%;
-    background-color: rgba(0, 0, 0, 0.24);
+    background-color: rgba(200, 200, 200, 0.089);
     display: inline-block;
     border-radius: 100px;
     padding: 20px 50px;
@@ -54,15 +68,14 @@ body {
     cursor: pointer;
 }
 
-.q-option:hover {
-    background-color: #d20094;
-}
+
 
 .q-option::before {
     content: '';
     position: absolute;
     border-radius: 100px;
-    background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.109));
+    border-top: 5px solid rgba(255, 255, 255, 0.65);
+    background: linear-gradient(to bottom, rgba(110, 108, 108, 0.376), rgba(255, 255, 255, 0.109));
     box-sizing: inherit;
     top: 0;
     left: 0;
@@ -70,14 +83,18 @@ body {
     right: 0;
     z-index: -1000;
     margin: -5px;
+    transition: all 0.2s;
+}
+
+.q-option:hover::before {
+    background-color: #d20094;
 }
 
 .q-count {
-    font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 5px;
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
 }
