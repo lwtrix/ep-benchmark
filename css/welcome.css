@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('../assets/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Outfit;
+}
+
+.welcome-body{
+    align-content: center;
+    margin: 50px auto;
+    width: 50%;
+}
+
+ul li{
+    margin: 10px 0;
+
+}
+
+h1{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 60px;
+    line-height: 65px;
+    font-weight: 300;
+}
+
+h2{
+    color: #D20094;
+}
+
+.logo2{
+    width: 100px;
+
+}
+
+.instruction{
+    padding-top: 25PX;
+    padding-left: 15px;
+
+}
+
+
+.proceed{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    font-size: 12px;
+}
+
+.proceed-button{
+    font-family: inter;
+    font-weight: 700;
+    padding: 10px 30px;
+    font-size: 15px;
+    background-color: #00FFFF;
+    border: beige;
+}
