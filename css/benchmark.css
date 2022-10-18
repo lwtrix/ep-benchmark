@@ -11,9 +11,20 @@ body {
     font-family: Outfit;
 }
 
+.main {
+    margin: 5% 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
 .header {
-    margin: 0 10%;
-    padding: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -22,16 +33,13 @@ body {
     width: 200px;
 }
 
+.quiz-showcase {
+    width: 100%;
+}
+
 .q-block {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 90vw;
-    height: 50vh;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 60px;
 }
 
 .q-block .q-category {
@@ -39,17 +47,17 @@ body {
 }
 
 .q-block .q-text {
-    font-size: 60px;
-    margin-bottom: 60px;
-    font-weight: 300;
+    font-size: 32px;
+    font-weight: 200;
+    margin-bottom: 35px;
+    margin-top: 60px;
 }
 
 .q-options {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
-    width: 80%;
     font-family: inter;
     font-weight: bold;
 }
@@ -57,9 +65,9 @@ body {
 .q-option:link,
 .q-option:visited,
 .q-option {
-    width: 40%;
+    width: 45%;
     background-color: rgba(200, 200, 200, 0.089);
-    display: inline-block;
+    display: block;
     border-radius: 100px;
     padding: 20px 50px;
     margin: 10px 0;
@@ -90,15 +98,38 @@ body {
     background-color: #d20094;
 }
 
-.q-count {
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.controls .q-count {
+    width: fit-content;
     text-transform: uppercase;
     letter-spacing: 5px;
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .q-count span {
     color: #d20094;
-} 
+}
+
+.controls .next-btn {
+    padding: 15px 50px;
+    font-family: Inter;
+    border: none;
+    font-weight: 700;
+    background-color: #00ffff;
+    color: #000000a9;
+}
+
+.next-btn i {
+    margin-left: 5px;
+}
+
+.next-btn:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #00ffff85,
+                -2px -2px 10px #00ffff85;
+}
