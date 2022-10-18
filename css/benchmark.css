@@ -133,3 +133,7 @@ body {
     box-shadow: 2px 2px 10px #00ffff85,
                 -2px -2px 10px #00ffff85;
 }
+
+.selected::before {
+    background-color: #d20094;
+}

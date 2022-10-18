@@ -1,16 +1,26 @@
 import { quizData } from "./data/quizData.js";
 const nextBtn = document.querySelector('#nextBtn');
 let questionCount = -1;
+const answers = [];
+
+
 
 const selectOption = (e) => {
-    console.log(quizData[questionCount].correct_answer)
-    console.log(questionCount)
+    // console.log(quizData[questionCount].correct_answer)
+    // console.log(questionCount)
 
-    if(e.target.textContent == quizData[questionCount].correct_answer) {
-        console.log('correct')
-    } else {
-        console.log('incorrect')
+    // if(e.target.textContent == quizData[questionCount].correct_answer) {
+    //     console.log('correct')
+    // } else {
+    //     console.log('incorrect')
+    // }
+    const optionsElements = document.querySelectorAll('.q-option');
+
+    for(let option of optionsElements) {
+        option.classList.remove('selected')
     }
+
+    console.log(e.target.classList.add('selected'))
 }
 
 const createQuestions = (arrData) => {
