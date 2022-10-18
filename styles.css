@@ -9,7 +9,7 @@
     justify-content: space-around;
 }
 
-.body-benchmark {
+.q-block {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@
     height: 50vh;
 }
 
-.option-container {
+.q-options {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -25,6 +25,6 @@
     width: 50%;
 }
 
-.option-container span {
+.q-option {
     width: 50%;
 }

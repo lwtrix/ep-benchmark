@@ -52,7 +52,7 @@ const nextQuestion = () => {
     }
 
     if(questionCount >= 0) {
-        quizBlocks[questionCount].style.display = 'block';
+        quizBlocks[questionCount].style.display = 'flex';
         console.log(questionCount, quizBlocks[questionCount], quizBlocks.length)
         if(questionCount === quizBlocks.length - 1) {
             nextBtn.setAttribute('disabled', '')
