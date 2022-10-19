@@ -1,4 +1,6 @@
 import { quizData } from "./data/quizData.js";
+import generateChart from "./scripts/chart.js";
+
 const nextBtn = document.querySelector('#nextBtn');
 const resultsContainer = document.querySelector('#resultsContainer');
 let questionCount = -1;
@@ -74,6 +76,10 @@ const displayResults = (resultsArr, score) => {
     correctCountDisplay.innerHTML = `${score}/${quizData.length} questions`
     wrongCountDisplay.innerHTML = `${quizData.length - score}/${quizData.length} questions`
 
+    const wrong = quizData.length - score;
+
+
+     generateChart(wrong, score);
 }
 
 const createResults = () => {
@@ -94,7 +100,7 @@ const createResults = () => {
         }
     }
 
-    displayResults(results, score)
+    displayResults(results, score);
 }
 
 const nextQuestion = () => {
