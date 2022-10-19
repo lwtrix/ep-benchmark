@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/benchmark.css">
 </head>
 <body>
-    <div class="main">
+    <div class="benchmark-container" id="benchmarkContainer">
 
         <div class="header">
             <img class="logo" src="../assets/epicode_logo.png" alt="#">
@@ -32,9 +32,32 @@
             </div>
         </div>
         
-        
+    </div>
 
-        
+    <div id="resultsContainer" class="results-container hide">
+        <div class="header">
+            <img class="logo" src="../assets/epicode_logo.png" alt="#">
+        </div>
+
+        <div class="results">
+            <div class="heading-container">
+                <p class="heading">Results</p>
+                <span class="text">The summary of your answers:</span>
+            </div>
+            <div class="results-display">
+                <div class="correct-label">
+                    <p>Correct</p>
+                    <p id="correctPercentageDisplay"></p>
+                    <p id="correctCountDisplay">questions</p>
+                </div>
+                <div class="visual"></div>
+                <div class="wrong-label">
+                    <p>Wrong</p>
+                    <p id="wrongPercentageDisplay"></p>
+                    <p id="wrongCountDisplay">questions</p>
+                </div>
+            </div>
+        </div>
     </div>
     
 

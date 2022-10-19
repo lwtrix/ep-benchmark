@@ -11,7 +11,11 @@ body {
     font-family: Outfit;
 }
 
-.main {
+.hide {
+    display: none;
+}
+
+.benchmark-container {
     margin: 5% 10%;
 }
 
@@ -122,6 +126,7 @@ body {
     font-weight: 700;
     background-color: #00ffff;
     color: #000000a9;
+    text-transform: uppercase;
 }
 
 .next-btn i {
