@@ -1,0 +1,49 @@
+.results-container {
+    margin: 5% 10%;
+}
+
+.results {
+    margin-top: 60px;
+}
+
+.heading-container {
+    text-align: center;
+}
+
+.heading-container .heading {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.heading-container .text {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.results-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.correct-label,
+.wrong-label {
+    font-size: 60px;
+}
+
+.wrong-label {
+    text-align: right;
+}
+
+.percentage {
+    font-weight: 700;
+}
+
+.question-count {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
+
