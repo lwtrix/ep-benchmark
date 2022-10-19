@@ -62,8 +62,8 @@ const displayResults = (resultsArr, score) => {
     const correctCountDisplay = document.querySelector('#correctCountDisplay');
     const wrongCountDisplay = document.querySelector('#wrongCountDisplay');
 
-    const correctPercentage = (100 * score) / quizData.length;
-    const wrongPercentage = ((100 * score) / quizData.length) - 100;
+    const correctPercentage = Math.floor((100 * score) / quizData.length);
+    const wrongPercentage = Math.floor(100 - ((100 * score) / quizData.length));
 
     const correctPercentageDisplay = document.querySelector('#correctPercentageDisplay');
     const wrongPercentageDisplay = document.querySelector('#wrongPercentageDisplay');
