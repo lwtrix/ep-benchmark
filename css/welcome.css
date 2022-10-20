@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,54 +10,62 @@ body {
     font-family: Outfit;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
+}
+
 .welcome-body{
     align-content: center;
-    margin: 50px auto;
-    width: 50%;
+    margin: 5% 10%;
 }
 
-ul li{
-    margin: 10px 0;
 
-}
 
-h1{
-    margin-top: 60px;
+.heading-welcome h1{
     margin-bottom: 30px;
-    font-size: 60px;
+    margin-top: 60px;
+    font-size: 80px;
     line-height: 65px;
-    font-weight: 300;
+    font-weight: 700;
 }
 
-h2{
+.instructions-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.instructions-container .heading {
     color: #D20094;
+    font-size: 32px;
 }
 
-.logo2{
-    width: 100px;
-
+.instructions-container .text {
+    max-width: 60%;
+    font-size: 18px;
+    font-weight: 100;
 }
 
-.instruction{
-    padding-top: 25PX;
-    padding-left: 15px;
-
+.instructions-list {
+    margin: 40px 25px;
+    font-size: 18px;
+    font-weight: 100;
 }
 
+.instructions-list .list-item {
+    margin: 5px;
+}
 
 .proceed{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 45px;
-    font-size: 12px;
+    font-size: 18px;
+    margin-top: 60px;
 }
 
-.proceed-button{
-    font-family: inter;
-    font-weight: 700;
-    padding: 10px 30px;
-    font-size: 15px;
-    background-color: #00FFFF;
-    border: beige;
-}

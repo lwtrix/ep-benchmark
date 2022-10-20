@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=Outfit:wght@200;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/benchmark.css">
     <link rel="stylesheet" href="../css/results.css">
 </head>
@@ -23,7 +23,7 @@
             
             </div>
             <div class="controls">
-                <span class="q-count">Question 1<span>/10</span></span>
+                <span class="q-count" id="questionCountDisplay"></span>
                 <button id="nextBtn" class="next-btn"><span>Next</span><i class="fa-solid fa-arrow-right-long"></i></button>
             </div>
     
@@ -52,6 +52,13 @@
                     <p id="correctCountDisplay" class="question-count">questions</p>
                 </div>
                 <div class="visual">
+                    <div class="text" id="chartText">
+                        <div class="top">
+                            <p>Congratulations</p>
+                            <p id="statusText">You passed the exam</p>
+                        </div>
+                        <p class="bottom">You will receive the certificate in a few minutes. Check your email inbox.</p>
+                    </div>
                     <canvas class="chart" id="chart" width="400px" height="400px"></canvas>
                 </div>
                 <div class="wrong-label">
@@ -60,6 +67,7 @@
                     <p id="wrongCountDisplay" class="question-count">questions</p>
                 </div>
             </div>
+                <button class="rate-btn">Rate Us</button>
         </div>
     </div>
     

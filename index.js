@@ -3,6 +3,8 @@ import generateChart from "./scripts/chart.js";
 
 const nextBtn = document.querySelector('#nextBtn');
 const resultsContainer = document.querySelector('#resultsContainer');
+const questionCountDisplay = document.querySelector('#questionCountDisplay');
+
 let questionCount = -1;
 let currAnswer;
 const answers = [];
@@ -60,12 +62,30 @@ const createQuestions = (arrData) => {
     
 }
 
-const displayResults = (resultsArr, score) => {
+const styleChartText = (hasPassed) => {
+    const chartText = document.querySelector('#chartText');
+
+     if(hasPassed) {
+        const statusText = document.querySelector('#statusText');
+        statusText.style.color = '#00ffff';
+     } else {
+         chartText.innerHTML = `<div class="top">
+                                    <p>Too bad!</p>
+                                    <p id="statusText">You failed the exam</p>
+                                </div>
+                                <p class="bottom">Keep calm though and have a go next time.</p>`
+
+        const statusText = document.querySelector('#statusText')
+        statusText.style.color = '#d20094';
+     }
+}
+
+const fetchAndDisplayResults = (resultsArr, score) => {
     const correctCountDisplay = document.querySelector('#correctCountDisplay');
     const wrongCountDisplay = document.querySelector('#wrongCountDisplay');
 
-    const correctPercentage = Math.floor((100 * score) / quizData.length);
-    const wrongPercentage = Math.floor(100 - ((100 * score) / quizData.length));
+    const correctPercentage = ((100 * score) / quizData.length).toFixed(2);
+    const wrongPercentage = (100 - ((100 * score) / quizData.length)).toFixed(2);
 
     const correctPercentageDisplay = document.querySelector('#correctPercentageDisplay');
     const wrongPercentageDisplay = document.querySelector('#wrongPercentageDisplay');
@@ -77,9 +97,12 @@ const displayResults = (resultsArr, score) => {
     wrongCountDisplay.innerHTML = `${quizData.length - score}/${quizData.length} questions`
 
     const wrong = quizData.length - score;
+    const hasPassed = correctPercentage >= 60 ? true : false;
 
+    
 
      generateChart(wrong, score);
+     styleChartText(hasPassed)
 }
 
 const createResults = () => {
@@ -100,7 +123,7 @@ const createResults = () => {
         }
     }
 
-    displayResults(results, score);
+    fetchAndDisplayResults(results, score);
 }
 
 const nextQuestion = () => {
@@ -118,12 +141,14 @@ const nextQuestion = () => {
     if(questionCount >= 0 && questionCount < quizData.length) {
         quizBlocks[questionCount].style.display = 'flex';
         console.log(questionCount, quizBlocks[questionCount], quizBlocks.length)
+
+        questionCountDisplay.innerHTML = `Question ${questionCount}<span>/${quizData.length}</span>`
     } 
 
     if(questionCount === quizData.length) {
         document.querySelector('#benchmarkContainer').classList.add('hide')
         document.querySelector('#resultsContainer').classList.remove('hide')
-        // switchResults()
+        
         createResults()
     }
 
