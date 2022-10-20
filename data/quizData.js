@@ -96,4 +96,25 @@ export const quizData = [
       correct_answer: "Java",
       incorrect_answers: ["Python", "C", "Jakarta"],
     },
+    {
+      category: "Science: Computers",
+      type: "multiple",
+      difficulty: "easy",
+      question: "What does CPU stand for?",
+      correct_answer: "Central Processing Unit",
+      incorrect_answers: [
+        "Central Process Unit",
+        "Computer Personal Unit",
+        "Central Processor Unit",
+      ],
+    },
+    {
+      category: "Science: Computers",
+      type: "multiple",
+      difficulty: "easy",
+      question:
+        "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
+      correct_answer: "Final",
+      incorrect_answers: ["Static", "Private", "Public"],
+    },
   ];
