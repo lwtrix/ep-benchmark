@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('../assets/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Outfit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
+}
+
+.welcome-body{
+    align-content: center;
+    margin: 5% 10%;
+}
+
+
+
+.heading-welcome h1{
+    margin-bottom: 30px;
+    margin-top: 60px;
+    font-size: 80px;
+    line-height: 65px;
+    font-weight: 700;
+}
+
+.instructions-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.instructions-container .heading {
+    color: #D20094;
+    font-size: 32px;
+}
+
+.instructions-container .text {
+    max-width: 60%;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.instructions-list {
+    margin: 40px 25px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.instructions-list .list-item {
+    margin: 5px;
+}
+
+.proceed{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 60px;
+}
+

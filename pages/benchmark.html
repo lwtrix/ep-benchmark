@@ -7,54 +7,76 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&family=Outfit:wght@200;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/benchmark.css">
+    <link rel="stylesheet" href="../css/results.css">
 </head>
 <body>
-    <div class="main">
+    <div class="benchmark-container" id="benchmarkContainer">
 
         <div class="header">
-            <img class="logo" src="./assets/epicode_logo.png" alt="#">
+            <img class="logo" src="../assets/epicode_logo.png" alt="#">
             <span class="timer">Timer</span>
         </div>
-
-        <div class="quiz-showcase" id="quizShowcase">
+        <div class="content">
+            <div class="quiz-showcase" id="quizShowcase">
             
-        </div>
-        <div class="q-count">
-            Question 1<span>/10</span>
-        </div>
-
-        <div class="controls" style="display: none;">
-            <button class="next-btn" id="nextBtn">Next</button>
-            <button class="start-btn" id="startBtn">Start</button>
-            <button class="submit-btn" id="submitBtn">Submit</button>
+            </div>
+            <div class="controls">
+                <span class="q-count" id="questionCountDisplay"></span>
+                <button id="nextBtn" class="next-btn"><span>Next</span><i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+    
+            <div class="#" style="display: none;">
+                <button class="start-btn" id="startBtn">Start</button>
+                <button class="submit-btn" id="submitBtn">Submit</button>
+            </div>
         </div>
         
+    </div>
 
-        
+    <div id="resultsContainer" class="results-container hide">
+        <div class="header">
+            <img class="logo" src="../assets/epicode_logo.png" alt="#">
+        </div>
+
+        <div class="results">
+            <div class="heading-container">
+                <p class="heading">Results</p>
+                <span class="text">The summary of your answers:</span>
+            </div>
+            <div class="results-display">
+                <div class="correct-label">
+                    <p>Correct</p>
+                    <p id="correctPercentageDisplay" class="percentage"></p>
+                    <p id="correctCountDisplay" class="question-count">questions</p>
+                </div>
+                <div class="visual">
+                    <div class="text" id="chartText">
+                        <div class="top">
+                            <p>Congratulations</p>
+                            <p id="statusText">You passed the exam</p>
+                        </div>
+                        <p class="bottom">You will receive the certificate in a few minutes. Check your email inbox.</p>
+                    </div>
+                    <canvas class="chart" id="chart" width="400px" height="400px"></canvas>
+                </div>
+                <div class="wrong-label">
+                    <p>Wrong</p>
+                    <p id="wrongPercentageDisplay" class="percentage"></p>
+                    <p id="wrongCountDisplay" class="question-count">questions</p>
+                </div>
+            </div>
+                <button class="rate-btn">Rate Us</button>
+        </div>
     </div>
     
 
-    
-<script type="module" src="index.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="../index.js"></script>
+<script src="https://kit.fontawesome.com/ae0c4ac1d1.js" crossorigin="anonymous"></script>
 
-
-<!-- <div class="header">
-        <span>Logo</span>
-        <span>Timer</span>
-    </div>
-
-    <div class="body-benchmark">
-        <p>Question</p>
-        <div class="option-container">
-            <span>Option</span>
-            <span>Option</span>
-            <span>Option</span>
-            <span>Option</span>
-        </div>
-    </div> -->
 </body>
 
 </html>
