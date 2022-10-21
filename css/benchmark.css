@@ -31,6 +31,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -73,6 +74,10 @@ body {
     position: absolute;
     left: 0;
     z-index: -1000;
+}
+
+.timer-display .time-remaining {
+    border-radius: 100px;
 }
 
 .warning {
