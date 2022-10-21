@@ -2,14 +2,25 @@ import { quizData } from "./data/quizData.js";
 import generateChart from "./scripts/chart.js";
 
 const nextBtn = document.querySelector('#nextBtn');
-const resultsContainer = document.querySelector('#resultsContainer');
 const questionCountDisplay = document.querySelector('#questionCountDisplay');
 
 let questionCount = -1;
 let currAnswer;
 const answers = [];
 
-
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+    
+        // Generate random number
+        var j = Math.floor(Math.random() * (i + 1));
+                    
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+        
+    return array;
+ }
 
 const selectOption = (e) => {
     // console.log(quizData[questionCount].correct_answer)
@@ -22,7 +33,7 @@ const selectOption = (e) => {
     // }
 
     currAnswer = e.target.textContent;
-
+    console.log(currAnswer)
     const optionsElements = document.querySelectorAll('.q-option');
 
     for(let option of optionsElements) {
@@ -43,6 +54,7 @@ const createQuestions = (arrData) => {
                                 <p class='q-text'>${question.question}</p>`;
 
         const options = [question.correct_answer, ...question.incorrect_answers];
+        shuffleArray(options)
         const questionOptions = document.createElement('div');
         questionOptions.classList = 'q-options';
 
@@ -110,11 +122,21 @@ const createResults = () => {
     let score = 0;
 
     for(let i = 0; i < quizData.length; i++) {
-            results.push({
-                'question': quizData[i].question,
-                'correct': quizData[i].correct_answer,
-                'givenAnswer': answers[i]
-            })
+            if (answers[i]) {
+                results.push({
+                    'question': quizData[i].question,
+                    'correct': quizData[i].correct_answer,
+                    'givenAnswer': answers[i]
+                })
+            } else {
+                results.push({
+                    'question': quizData[i].question,
+                    'correct': quizData[i].correct_answer,
+                    'givenAnswer': 'No Answer'
+                })
+            }
+
+            
     }
 
     for(let result of results) {
@@ -123,14 +145,17 @@ const createResults = () => {
         }
     }
 
+    console.log(results)
+
     fetchAndDisplayResults(results, score);
 }
 
 const nextQuestion = () => {
+
     if(currAnswer) {
         answers.push(currAnswer);
     }
-
+    currAnswer = 'No answer';
     questionCount++
     const quizBlocks = quizShowcase.children;
 
@@ -142,7 +167,7 @@ const nextQuestion = () => {
         quizBlocks[questionCount].style.display = 'flex';
         console.log(questionCount, quizBlocks[questionCount], quizBlocks.length)
 
-        questionCountDisplay.innerHTML = `Question ${questionCount}<span>/${quizData.length}</span>`
+        questionCountDisplay.innerHTML = `Question ${questionCount}<span>/${quizData.length}</span>`        
     } 
 
     if(questionCount === quizData.length) {
@@ -155,6 +180,7 @@ const nextQuestion = () => {
 }
 
 const startQuiz = () => {
+
     createQuestions(quizData);
     nextQuestion()
 }
@@ -163,3 +189,4 @@ const startQuiz = () => {
 nextBtn.addEventListener('click', nextQuestion);
 startQuiz()
 
+export {nextQuestion}

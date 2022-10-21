@@ -64,6 +64,7 @@
 
 .percentage {
     font-weight: 700;
+    width: 240px;
 }
 
 .question-count {
@@ -86,6 +87,7 @@
     transform: translateX(15px);
     font-weight: 700;
     display: block;
+    cursor: pointer;
 }
 
 .rate-btn:hover {

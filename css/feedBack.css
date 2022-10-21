@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('../assets/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Outfit;
+    font-size: bold;
+}
+
+.logo {
+    width: 200px;
+}
+
+.header {
+    margin-bottom: 60px;
+}
+
+.feedback-page{
+    align-content: center;
+    margin: 5% 10%;
+    height: 350px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+
+.open-feedback{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    margin: 30px;
+}
+
+h1{
+    font-size: 65px;
+}
+
+p{
+    margin: 30px;
+    font-size: 30px;
+}
+
+.info{
+    font-family: Inter;
+    background-color: #00ffff;
+    color: black;
+    border: none;
+    margin: 30px;
+    font-weight: 550;
+    padding: 15px 50px;
+    font-size: 18px;
+    align-self: center;
+    text-transform: uppercase;
+}
+
+.info:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #00ffff85,
+                -2px -2px 10px #00ffff85;
+}
+
+.comment{
+    width: 70%;
+    font-size: 18px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    align-self: center;
+    background: none;
+    border: none;
+    outline: 0px;
+    color: grey;
+    border-bottom: 1px solid #D20094;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: #301168;
+}
+
+.fa-sharp{
+    cursor: pointer;
+}
