@@ -33,23 +33,24 @@
         </div>
         <div class="proceed">
             <div class="check-container"> 
-                <input type="checkbox" id="checkbox" class="checkbox" id="checked">
+                <input type="checkbox" id="checkBox" value="I promise" class="checkbox">
                 <span class="text">I promise to answer myself without help from anyone</span>
             </div>
-            <a href="./benchmark.html" class="proceed-button" id="proceed">PROCEED</a>
+            <a class="proceed-button" id="proceed">PROCEED</a>
 
         </div>
     </div>
     
 
     <script>
-        const validateCheckBox = function(){
-            const checked = document.querySelector('#checked').checked
-            if (checked == false){
-                docuemnt.querySelector("#proceed").style.color = 'white'
-                return false;
+        document.querySelector('#checkBox').onclick = function () {
+            if(this.checked) {
+                document.querySelector('#proceed').setAttribute('href', './benchmark.html');
+            } else {
+                document.querySelector('#proceed').setAttribute('href', '');
             }
         }
+        
     </script>
 </body>
 </html>

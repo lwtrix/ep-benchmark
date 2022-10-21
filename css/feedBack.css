@@ -12,12 +12,16 @@ body {
 }
 
 .logo {
-    width: 150px;
+    width: 200px;
+}
+
+.header {
+    margin-bottom: 60px;
 }
 
 .feedback-page{
     align-content: center;
-    margin: 2.5% 10%;
+    margin: 5% 10%;
     height: 350px;
 }
 
