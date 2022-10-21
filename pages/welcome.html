@@ -33,13 +33,23 @@
         </div>
         <div class="proceed">
             <div class="check-container"> 
-                <input type="checkbox" id="checkbox" class="checkbox">
+                <input type="checkbox" id="checkbox" class="checkbox" id="checked">
                 <span class="text">I promise to answer myself without help from anyone</span>
             </div>
-            <a href="./benchmark.html" class="proceed-button">PROCEED</a>
+            <a href="./benchmark.html" class="proceed-button" id="proceed">PROCEED</a>
 
         </div>
     </div>
     
+
+    <script>
+        const validateCheckBox = function(){
+            const checked = document.querySelector('#checked').checked
+            if (checked == false){
+                docuemnt.querySelector("#proceed").style.color = 'white'
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
