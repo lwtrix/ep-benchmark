@@ -86,6 +86,7 @@
     transform: translateX(15px);
     font-weight: 700;
     display: block;
+    cursor: pointer;
 }
 
 .rate-btn:hover {

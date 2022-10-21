@@ -163,3 +163,4 @@ const startQuiz = () => {
 nextBtn.addEventListener('click', nextQuestion);
 startQuiz()
 
+

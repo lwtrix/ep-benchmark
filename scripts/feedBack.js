@@ -130,3 +130,10 @@ stars[9].onclick = function(){
     stars[8].style.color = "#00ffff";
     stars[9].style.color = "#00ffff";
 }
+
+/* ---------------Button MORE INFO------------ */
+
+function goToLink(link){
+    console.log(link.value);
+    location.href = link.value;
+}
