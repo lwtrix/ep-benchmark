@@ -83,7 +83,7 @@ const newTimer  = new Timer(durationDisplay, nextBtn, {
         perimeter * timeLeft / timerDuration) - perimeter
     },
     onComplete() {
-        console.log('Timer Stopped')
+        this.resetTimer()
     }
 });
 
