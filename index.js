@@ -8,7 +8,19 @@ let questionCount = -1;
 let currAnswer;
 const answers = [];
 
-
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+    
+        // Generate random number
+        var j = Math.floor(Math.random() * (i + 1));
+                    
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+        
+    return array;
+ }
 
 const selectOption = (e) => {
     // console.log(quizData[questionCount].correct_answer)
@@ -42,6 +54,7 @@ const createQuestions = (arrData) => {
                                 <p class='q-text'>${question.question}</p>`;
 
         const options = [question.correct_answer, ...question.incorrect_answers];
+        shuffleArray(options)
         const questionOptions = document.createElement('div');
         questionOptions.classList = 'q-options';
 
