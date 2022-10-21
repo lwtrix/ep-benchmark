@@ -43,13 +43,18 @@
     
 
     <script>
-        const validateCheckBox = function(){
-            const checked = document.querySelector('#checked').checked
-            if (checked == false){
-                docuemnt.querySelector("#proceed").style.color = 'white'
-                return false;
+         const checkBox = document.querySelector('#checkbox')
+         const change = document.querySelector('.proceed-button')
+
+        function validate(){
+            if(checkBox.checked){
+                change.style.display =('block')
+            } else{
+                change.style.display =('none')
             }
         }
+
+        checkBox.addEventListener('change',validate)
     </script>
 </body>
 </html>
